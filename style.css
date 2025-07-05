@@ -63,21 +63,51 @@ body {
   background: #faf9f6; /* subtle off-white */
   white-space: pre-line;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* messages */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  max-width: 75%;
+  padding: 12px 18px;
+  border-radius: 18px;
+  display: inline-block;
+  word-break: break-word;
+  font-size: 17px;
+  box-shadow: 0 2px 8px rgba(191, 161, 107, 0.06);
 }
 
+/* User message bubble: right side, black background, white text */
 .msg.user {
-  color: #1a1a1a;
-  font-weight: 500;
+  background: #1a1a1a;
+  color: #fff;
+  margin-left: 25%;
+  margin-right: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 18px;
+  align-self: flex-end;
+  text-align: right;
 }
 
+/* Assistant message bubble: left side, gold border, off-white background */
 .msg.ai {
-  color: #6d6d6d;
+  background: #faf9f6;
+  color: #1a1a1a;
+  border: 1.5px solid #bfa16b;
+  margin-right: 25%;
+  margin-left: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 18px;
+  align-self: flex-start;
+  text-align: left;
 }
 
 /* input row */

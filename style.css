@@ -6,21 +6,79 @@
 }
 
 /* —— body + fonts —— */
+
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #1a1a1a; /* L’Oréal black */
-  background: #fff;
+  color: #fff;
+  background: #000;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-.page-wrapper {
-  width: 90%;
-  max-width: 900px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(26, 26, 26, 0.08);
-  border: 1.5px solid #e5e5e5;
+/* Center the main content and set a max width */
+.main-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 100px; /* room for footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-header,
+.chatbox,
+.site-footer {
+  margin-bottom: 30px;
+}
+
+/* Gold circles background using pseudo-element */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at 50% 50%,
+      transparent 120px,
+      #bfa16b 122px,
+      transparent 124px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 220px,
+      #bfa16b 222px,
+      transparent 224px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 320px,
+      #bfa16b 322px,
+      transparent 324px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 420px,
+      #bfa16b 422px,
+      transparent 424px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 520px,
+      #bfa16b 522px,
+      transparent 524px
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 /* L’Oréal logo */
@@ -36,7 +94,7 @@ body {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 10px;
-  background: #fff;
+  background: #000; /* Black background */
 }
 
 .site-title {
@@ -44,13 +102,18 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  color: #fff; /* White text */
   margin-bottom: 10px;
 }
 
 /* chat window */
 .chatbox {
   margin: 40px 0;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  border-radius: 12px;
+  /* Optional: add a subtle gold border for style */
+  border: 1.5px solid #bfa16b;
 }
 
 .chat-window {
@@ -178,11 +241,19 @@ body {
 
 /* footer */
 .site-footer {
-  margin: 60px 0 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #000;
+  border-top: 2px solid #bfa16b;
+  box-shadow: 0 -2px 12px rgba(191, 161, 107, 0.06);
+  margin: 0;
+  padding: 12px 0 8px 0;
   text-align: center;
-  font-size: 14px;
-  color: #6d6d6d;
-  background: #fff;
+  font-size: 12px;
+  color: #fff;
+  z-index: 100;
 }
 
 .site-footer nav {
@@ -190,10 +261,10 @@ body {
 }
 
 .site-footer a {
-  margin: 0 8px;
-  color: #1a1a1a;
+  margin: 0 4px;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   transition: color 0.2s;
 }
 

@@ -299,3 +299,101 @@ body::before {
 .site-footer a:hover {
   color: #bfa16b;
 }
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 900px) {
+  .main-content {
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .chat-window {
+    font-size: 16px;
+    padding: 12px;
+    height: 300px;
+  }
+  .chat-form input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .site-header {
+    padding-top: 24px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .loreal-logo {
+    max-width: 120px;
+  }
+  .site-title {
+    font-size: 18px;
+  }
+  .chatbox {
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  .chat-window {
+    font-size: 15px;
+    padding: 8px;
+    height: 200px;
+    border-radius: 6px;
+  }
+  .msg {
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 90%;
+  }
+  .msg.user,
+  .msg.ai {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .chat-form {
+    gap: 6px;
+  }
+  .chat-form input {
+    font-size: 15px;
+    padding: 8px;
+  }
+  .chat-form button {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    padding: 8px;
+  }
+  .site-footer {
+    font-size: 11px;
+    padding: 8px 0 6px 0;
+  }
+}
+
+/* Ensure footer stays above mobile keyboard */
+@media (max-width: 600px) {
+  .site-footer {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+/* Allow chatbox and chat-window to shrink on small screens */
+.chatbox,
+.chat-window {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll on small screens */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}

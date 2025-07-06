@@ -74,6 +74,24 @@ body::before {
       transparent 520px,
       #bfa16b 522px,
       transparent 524px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 620px,
+      #bfa16b 622px,
+      transparent 624px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 720px,
+      #bfa16b 722px,
+      transparent 724px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 820px,
+      #bfa16b 822px,
+      transparent 824px
     );
   background-repeat: no-repeat;
   background-position: center;
@@ -224,6 +242,16 @@ body::before {
 .chat-form button:focus {
   outline: 2px solid #bfa16b;
   outline-offset: 2px;
+}
+
+.chatbox {
+  margin: 40px 0;
+  background: #000; /* already black, this covers the gold rings behind */
+  color: #fff;
+  border-radius: 12px;
+  border: 1.5px solid #bfa16b;
+  position: relative;
+  z-index: 1; /* ensures it's above the background circles */
 }
 
 /* visually hidden */

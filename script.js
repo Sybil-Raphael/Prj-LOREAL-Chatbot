@@ -65,7 +65,9 @@ chatForm.addEventListener("submit", async (e) => {
         body: JSON.stringify({
           model: "gpt-4o",
           messages: conversation,
-          max_tokens: 300,
+          max_completion_tokens: 650,
+          temperature: 0.5,
+          frequency_penalty: 0.8,
         }),
       }
     );

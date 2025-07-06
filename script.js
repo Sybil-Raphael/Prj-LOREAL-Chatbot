@@ -41,8 +41,8 @@ chatForm.addEventListener("submit", async (e) => {
   chatWindow.innerHTML += `<div class="msg user">${message}</div>`;
   chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
 
-  // Show the latest user question above the chat window
-  userQuestionDisplay.textContent = `You asked: "${message}"`;
+  // Show the latest user question above the chat window, with "You" in bold
+  userQuestionDisplay.innerHTML = `<strong>You:</strong> "${message}"`;
   userQuestionDisplay.style.display = "block";
 
   // Clear input
